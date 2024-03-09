@@ -1,11 +1,7 @@
+"use client";
 import Image from "next/image";
-import {
-    ArrowRightCircle,
-    View,
-    ArrowDownToDot,
-    ArrowLeft,
-    ArrowRight,
-} from "lucide-react";
+import { ArrowRightCircle, View, ArrowDownToDot } from "lucide-react";
+import { useRef } from "react";
 
 const STATISTIC = [
     { id: "01", label: "Unit tersedia", value: "100+" },
@@ -14,6 +10,8 @@ const STATISTIC = [
 ];
 
 export default function Homepage() {
+    const ref = useRef();
+
     return (
         <main>
             <div className="flex flex-col lg:flex-row">
